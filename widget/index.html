@@ -14,7 +14,7 @@
                 var content = result.data.content;
                 if (content && content.url) {
                     buildfire.getContext(function (err, context) {
-                        if (context.device.platform != "web")
+                        if (context.device.platform == "web")
                             buildfire.navigation.openWindow(content.url, "_blank");
                         else {
                             if (content.openInApp)
